@@ -1,0 +1,45 @@
+const knight = document.getElementById("knightHeading");
+const wizard = document.getElementById("wizardHeading");
+const infoDiv = document.getElementById("infoDiv");
+const headingForItem = document.createElement("h2");
+const pageHeading = document.getElementById("whatClassYouPicked");
+const knightEquipment = {
+  weapon: "Silver Sword",
+  head: "Metal Helmet",
+  body: "Iron Chestplate",
+  feet: "Iron Boots"
+};
+const wizardEquipment = {
+  weapon: "Fire Rod",
+  head: "Wizard's hat",
+  body: "Magic Robe",
+  feet: "Magic Slippers"
+};
+
+function knightChoice() {
+  if (true) {
+    knight.style.display = "none";
+    wizard.style.display = "none";
+    let infoElement = document.createElement("p");
+    pageHeading.innerText = "Knight";
+    headingForItem.innerText = "Your equipment:⚔️";
+    infoElement.innerText = "Weapon:" + knightEquipment.weapon + " " + "\nHead:" + knightEquipment.head + "\nBody: " + knightEquipment.body + " \nFeet: " + knightEquipment.feet;
+    infoDiv.appendChild(headingForItem);
+    infoDiv.appendChild(infoElement);
+  }
+}
+knight.addEventListener("click", knightChoice);
+
+function wizardChoice() {
+  if (true) {
+    wizard.style.display = "none";
+    knight.style.display = "none";
+    let wizardInfo = document.createElement("p");
+    pageHeading.innerText = "Wizard";
+    headingForItem.innerText = "Your equipment:🧙‍♂️";
+    wizardInfo.innerText = "Weapon:" + wizardEquipment.weapon + " " + "\nHead:" + wizardEquipment.head + "\nBody: " + wizardEquipment.body + " \nFeet: " + wizardEquipment.feet;
+    infoDiv.appendChild(headingForItem);
+    infoDiv.appendChild(wizardInfo);
+  }
+}
+wizard.addEventListener("click", wizardChoice);
