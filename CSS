@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+}
+#classDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#knightHeading:hover {
+  text-decoration: underline;
+}
+#wizardHeading:hover {
+  text-decoration: underline;
+}
+#infoDiv {
+  text-align: center;
+  font-weight: bold;
+}
